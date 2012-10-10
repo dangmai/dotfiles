@@ -2,8 +2,17 @@
 #
 # bootstrap installs things.
 
-# Assume everyone's on OS X and run Homebrew (*nix-ers beware)
-. script/homebrew
+. script/setup-common
+rc=$?
+if [ $rc != 0 ]; then
+    exit $rc
+fi
+if [ -z "$1" ]; then
+    os="debian" # applies to ubuntu as well
+else
+    os=$1
+fi
+. script/setup-$os
 
 # Run the install (I'd like to pull this out of rake, eventually)
 rake install

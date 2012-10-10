@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# Install oh-my-zsh
+curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+echo -n "oh-my-zsh has finished. Do you want to continue? (y/n): "
+read confirm
+
+if [ "$confirm" = "n" ]; then
+    exit 1
+fi

@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# Shell aliases don't work in shell script, so we can't just call uninstall_oh_my_zsh
+. $ZSH/tools/uninstall.sh

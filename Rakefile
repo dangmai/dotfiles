@@ -28,7 +28,7 @@ task :install do
         end
       end
       FileUtils.rm_rf(target) if overwrite || overwrite_all
-      `mv "$HOME/.#{file}" "$HOME/.#{file}.backup"` if backup || backup_all
+      `mv "$HOME/.#{file}" "$HOME/.#{file}.pre_dotfiles"` if backup || backup_all
     end
     `ln -s "$PWD/#{linkable}" "#{target}"`
   end
@@ -47,10 +47,9 @@ task :uninstall do
     end
     
     # Replace any backups made during installation
-    if File.exists?("#{ENV["HOME"]}/.#{file}.backup")
-      `mv "$HOME/.#{file}.backup" "$HOME/.#{file}"` 
+    if File.exists?("#{ENV["HOME"]}/.#{file}.pre_dotfiles")
+      `mv "$HOME/.#{file}.pre_dotfiles" "$HOME/.#{file}"` 
     end
-
   end
 end
 
