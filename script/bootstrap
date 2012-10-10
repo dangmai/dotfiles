@@ -2,7 +2,6 @@
 #
 # bootstrap installs things.
 
-. script/setup-common
 rc=$?
 if [ $rc != 0 ]; then
     exit $rc
@@ -13,6 +12,7 @@ else
     os=$1
 fi
 . script/setup-$os
+. script/setup-common
 
 # Run the install (I'd like to pull this out of rake, eventually)
 rake install
