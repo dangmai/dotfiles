@@ -1,5 +1,5 @@
 # Install other cool stuffs
-sudo apt-get install grc coreutils python python-pip python-dev build-essential rake curl
+sudo apt-get install grc coreutils python python-pip python-dev build-essential rake curl zsh
 sudo pip install --upgrade pip 
 sudo pip install --upgrade virtualenv 
 sudo pip install virtualenvwrapper
