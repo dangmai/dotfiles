@@ -49,3 +49,6 @@ compinit
 
 # load every completion after autocomplete loads
 for config_file ($DOT/**/completion.zsh) source $config_file
+
+# Add Vagrant to PATH
+PATH=$PATH:/opt/vagrant/bin
