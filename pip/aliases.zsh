@@ -1,1 +1,0 @@
-alias pip='sudo pip'
