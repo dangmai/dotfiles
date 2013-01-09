@@ -50,3 +50,5 @@ compinit
 # load every completion after autocomplete loads
 for config_file ($DOT/**/completion.zsh) source $config_file
 
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
