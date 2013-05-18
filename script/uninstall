@@ -1,6 +1,0 @@
-#!/bin/sh
-#
-# uninstall things.
-
-rake uninstall
-. script/uninstall-common
