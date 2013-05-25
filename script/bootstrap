@@ -38,13 +38,28 @@ install_dotfiles () {
   backup_all=false
   skip_all=false
 
-  for source in `find $DOTFILES_ROOT -maxdepth 2 -name \*.symlink`
+  for source in `find $DOTFILES_ROOT -name \*.\*symlink`
   do
-    dest="$HOME/.`basename \"${source%.*}\"`"
-
-    if [ -f $dest ] || [ -d $dest ]
+    # Recursively symlinking the files to home dir, also creating the necessary
+    # dirs
+    path_to_symlink=${source#$DOTFILES_ROOT}
+    path_to_symlink=${path_to_symlink#/*/}  # take out the topical dir
+    dest="$HOME"
+    if [ `dirname $path_to_symlink` != "." ]
     then
+      # At this point, $dest is the directory that the symlink will end up in
+      dest="${dest}/`dirname $path_to_symlink`"
+      mkdir -p "${dest}"
+    fi
+    if [ ${source##*.} == "dotsymlink" ]
+    then
+      dest="${dest}/.`basename \"${source%.*}\"`"
+    else
+      dest="${dest}/`basename \"${source%.*}\"`"
+    fi
 
+    if [ -L $dest ] || [ -f $dest ] || [ -d $dest ]
+    then
       overwrite=false
       backup=false
       skip=false
