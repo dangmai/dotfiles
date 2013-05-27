@@ -255,7 +255,7 @@ song_list_format = "{%N} {%a - }{%b - }{%t}|{$8%f$9}$R{$3(%l)$9}"
 ##   not available.
 ##
 #
-#song_columns_list_format = "(7f)[green]{l} (25)[cyan]{a} (40)[]{t|f} (30)[red]{b}"
+song_columns_list_format = "(3f)[]{n} (25)[cyan]{a} (40)[]{t|f} (5f)[green]{l} (30)[red]{b}"
 #
 ##### various settings #####
 #
