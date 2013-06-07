@@ -2,6 +2,10 @@
 
 noremap j 5j
 noremap k 5k
+noremap x d
+noremap d <C-d>
+noremap u <C-u>
+noremap U u
 source! /Users/dangmai/.vimperatorrc.local
 
 " vim: set ft=vimperator:
