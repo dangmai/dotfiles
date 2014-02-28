@@ -1,7 +1,7 @@
 [general]
 cfg_schema = 1
 UseWorkarea = True
-ModMask = <Ctrl><Mod4>
+ModMask = <Ctrl><Shift>
 
 [keys]
 C = move-to-center
