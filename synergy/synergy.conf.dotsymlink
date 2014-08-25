@@ -1,0 +1,36 @@
+section: screens
+	DangMai-Workstation:
+		halfDuplexCapsLock = false
+		halfDuplexNumLock = false
+		halfDuplexScrollLock = false
+		xtestIsXineramaUnaware = false
+		switchCorners = none 
+		switchCornerSize = 0
+	DangMai-Windows:
+		halfDuplexCapsLock = false
+		halfDuplexNumLock = false
+		halfDuplexScrollLock = false
+		xtestIsXineramaUnaware = false
+		switchCorners = none 
+		switchCornerSize = 0
+end
+
+section: aliases
+end
+
+section: links
+	DangMai-Workstation:
+		right = DangMai-Windows
+	DangMai-Windows:
+		left = DangMai-Workstation
+end
+
+section: options
+	relativeMouseMoves = true
+	screenSaverSync = false
+	win32KeepForeground = false
+	switchCorners = none 
+	switchCornerSize = 0
+	keystroke(ScrollLock) = lockCursorToScreen(toggle)
+end
+
