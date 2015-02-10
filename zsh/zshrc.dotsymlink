@@ -1,3 +1,4 @@
+unsetopt nomatch  # to make sure that zsh doesn't stop running when there's no match for other scripts later on
 # Oh-my-zsh first, so we can override its functionalities by using our dotfiles
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
