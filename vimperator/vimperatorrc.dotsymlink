@@ -8,6 +8,6 @@ noremap u <C-u>
 noremap U u
 noremap , <C-p>
 noremap . <C-n>
-source! /Users/dangmai/.vimperatorrc.local
+source! /home/dangmai/.vimperatorrc.local
 
 " vim: set ft=vimperator:
