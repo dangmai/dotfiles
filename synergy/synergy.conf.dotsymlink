@@ -1,12 +1,12 @@
 section: screens
-	DangMai-Workstation:
+	theshire:
 		halfDuplexCapsLock = false
 		halfDuplexNumLock = false
 		halfDuplexScrollLock = false
 		xtestIsXineramaUnaware = false
 		switchCorners = none 
 		switchCornerSize = 0
-	DangMai-Windows:
+	Gondor:
 		halfDuplexCapsLock = false
 		halfDuplexNumLock = false
 		halfDuplexScrollLock = false
@@ -19,10 +19,10 @@ section: aliases
 end
 
 section: links
-	DangMai-Workstation:
-		right = DangMai-Windows
-	DangMai-Windows:
-		left = DangMai-Workstation
+	theshire:
+		right = Gondor
+	Gondor:
+		left = theshire
 end
 
 section: options
