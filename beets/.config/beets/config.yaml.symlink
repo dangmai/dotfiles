@@ -4,3 +4,4 @@ plugins: discogs fromfilename fetchart embedart mbsync replaygain scrub the smar
 
 replaygain:
     backend: gstreamer
+    overwrite: True
