@@ -1,16 +1,20 @@
-'exception-reporting':
-  'userId': '1c5bdd7c-2cd3-53a4-7cbd-7a45a77c9419'
-'welcome':
-  'showOnStartup': false
-'metrics':
-  'userId': 'a916da2ac60e528e35748ad51bee683ed91dbaf2'
-'core':
-  'themes': [
-    'atom-dark-ui'
-    'base16-tomorrow-dark-theme'
-  ]
-  'projectHome': '/home/dangmai/Dev'
-'editor':
-  'fontSize': 14
-  'showInvisibles': true
-  'invisibles': {}
+{
+  "*": {
+    "welcome": {
+      "showOnStartup": false
+    },
+    "core": {
+      "ignoredNames": [
+        ".git",
+        ".hg",
+        ".svn"
+      ],
+      "projectHome": "/home/dangmai/Dev"
+    },
+    "editor": {
+      "invisibles": {},
+      "preferredLineLength": 100,
+      "showInvisibles": true
+    }
+  }
+}
