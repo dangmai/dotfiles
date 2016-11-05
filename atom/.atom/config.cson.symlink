@@ -1,20 +1,27 @@
 {
   "*": {
-    "welcome": {
-      "showOnStartup": false
-    },
     "core": {
       "ignoredNames": [
         ".git",
         ".hg",
         ".svn"
       ],
-      "projectHome": "/home/dangmai/Dev"
+      "packagesWithKeymapsDisabled": [],
+      "projectHome": "/home/dangmai/Dev",
+      "telemetryConsent": "no"
     },
     "editor": {
       "invisibles": {},
       "preferredLineLength": 100,
+      "scrollPastEnd": true,
+      "showIndentGuide": true,
       "showInvisibles": true
+    },
+    "exception-reporting": {
+      "userId": "32d84284-cf27-8215-97ae-8ad14e196486"
+    },
+    "welcome": {
+      "showOnStartup": false
     }
   }
 }
