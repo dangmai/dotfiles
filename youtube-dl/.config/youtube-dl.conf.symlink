@@ -1,1 +1,1 @@
---no-playlist --format 'bestvideo+bestaudio'
+--no-playlist --format 'bestvideo+bestaudio' --no-part
