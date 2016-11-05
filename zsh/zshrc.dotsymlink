@@ -58,6 +58,11 @@ PATH=/usr/local/bin:/usr/local/share/python:/usr/local/share/npm/bin:/opt/local/
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
+# Make sure Docker client doesn't time out too soon
+export COMPOSE_HTTP_TIMEOUT=240
+
+export EDITOR=vim
+
 # Auto start tmux or reattach tmux session
 if [ $TERM != "screen-256color" ] && [  $TERM != "screen" ]; then
     tmux attach || tmux new;
