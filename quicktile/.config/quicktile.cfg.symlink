@@ -18,4 +18,9 @@ KP_7 = top-left
 KP_8 = top
 KP_9 = top-right
 KP_Enter = monitor-switch
-
+F1 = top-left
+F2 = bottom-left
+F3 = top-right
+F4 = bottom-right
+F5 = left
+F6 = right
