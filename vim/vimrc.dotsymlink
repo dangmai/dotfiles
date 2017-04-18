@@ -14,3 +14,5 @@ set expandtab " tab to space
 set tabstop=4 " 4 spaces for 1 tab
 set smarttab " honor shiftwidth
 set shiftwidth=4 " 4 spaces for every indentation
+set listchars=eol:¬,tab:>·,trail:·,extends:>,precedes:<,space:·
+set list
