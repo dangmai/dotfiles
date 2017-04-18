@@ -1,4 +1,5 @@
 syntax enable " turn on syntax highlighting
+scriptencoding utf-8
 set encoding=utf8 " set the default encoding to unicode
 set ruler " show the ruler (showing where I am in the file, bottom right corner)
 set hidden " allow to open a different file without having to save the current buffer
@@ -14,5 +15,10 @@ set expandtab " tab to space
 set tabstop=4 " 4 spaces for 1 tab
 set smarttab " honor shiftwidth
 set shiftwidth=4 " 4 spaces for every indentation
-set listchars=eol:¬,tab:>·,trail:·,extends:>,precedes:<,space:·
+" http://stackoverflow.com/questions/18321538/vim-error-e474-invalid-argument-listchars-tab-trail
+if has("patch-7.4.710")
+    set listchars=eol:¬,tab:>·,trail:·,extends:>,precedes:<,space:·
+else
+    set listchars=eol:¬,tab:>·,trail:·,extends:>,precedes:<
+endif
 set list
