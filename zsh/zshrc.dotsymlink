@@ -29,7 +29,14 @@ source $ZSH/oh-my-zsh.sh
 
 # dotfiles actions here
 # shortcut to this dotfiles path is $DOT
-export DOT=$HOME/.dotfiles
+SOURCE="${(%):-%N}"
+while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symlink
+  DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+  SOURCE="$(readlink "$SOURCE")"
+  [[ $SOURCE != /* ]] && SOURCE="$DIR/$SOURCE" # if $SOURCE was a relative symlink, we need to resolve it relative to the path where the symlink file was located
+done
+DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+export DOT=`cd "${DIR}"/.. && pwd`
 
 # your project folder that we can `c [tab]` to
 export PROJECTS=~/Dev
