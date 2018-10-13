@@ -2,6 +2,8 @@
 cfg_schema = 1
 UseWorkarea = True
 ModMask = <Ctrl><Shift>
+ColumnCount = 3
+MovementsWrap = True
 
 [keys]
 C = move-to-center
@@ -24,3 +26,4 @@ F3 = top-right
 F4 = bottom-right
 F5 = left
 F6 = right
+
