@@ -1,7 +1,0 @@
-directory: /mnt/main/Music/Swing
-library: /mnt/main/Music/beet.blb
-plugins: discogs fromfilename fetchart embedart mbsync replaygain scrub the smartplaylist
-
-replaygain:
-    backend: gstreamer
-    overwrite: True
