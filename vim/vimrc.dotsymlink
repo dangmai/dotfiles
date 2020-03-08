@@ -12,9 +12,9 @@ set nobackup " no *.ext~ backup file
 set nowritebackup " write buffer directly to file, instead of temp file and then copy to real file
 set noswapfile " no *.ext.swp swap file
 set expandtab " tab to space
-set tabstop=4 " 4 spaces for 1 tab
+set tabstop=2 " 4 spaces for 1 tab
 set smarttab " honor shiftwidth
-set shiftwidth=4 " 4 spaces for every indentation
+set shiftwidth=2 " 4 spaces for every indentation
 " http://stackoverflow.com/questions/18321538/vim-error-e474-invalid-argument-listchars-tab-trail
 if has("patch-7.4.710")
     set listchars=eol:¬,tab:>·,trail:·,extends:>,precedes:<,space:·
