@@ -40,7 +40,7 @@ DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 export DOT=`cd "${DIR}"/.. && pwd`
 
 # your project folder that we can `c [tab]` to
-export PROJECTS=~/Dev
+export PROJECTS=~/dev
 
 # source every .zsh file in this rep
 for config_file ($DOT/**/*.zsh) source $config_file
@@ -60,15 +60,9 @@ compinit
 for config_file ($DOT/**/completion.zsh) source $config_file
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-# Make sure Homebrew and MacPorts stuff get called
-PATH=/usr/local/bin:/usr/local/share/python:/usr/local/share/npm/bin:/opt/local/bin:/opt/local/sbin:$PATH
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
 
 # Make sure Docker client doesn't time out too soon
 export COMPOSE_HTTP_TIMEOUT=240
-
 export EDITOR=vim
 
 # Auto start tmux or reattach tmux session
