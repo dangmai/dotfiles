@@ -22,7 +22,7 @@ ZSH_THEME="pygmalion"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git sfdx systemd sudo tmux python node npm nvm man kubectl httpie helm docker docker-compose cp aws asdf)
+plugins=(git sfdx systemd sudo tmux python node npm man kubectl httpie helm docker docker-compose cp aws asdf)
 
 source $ZSH/oh-my-zsh.sh
 
