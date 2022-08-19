@@ -5,3 +5,4 @@
 *.rbc
 python_env
 .env
+.envrc
