@@ -59,8 +59,6 @@ compinit
 # load every completion after autocomplete loads
 for config_file ($DOT/**/completion.zsh) source $config_file
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
 # Make sure Docker client doesn't time out too soon
 export COMPOSE_HTTP_TIMEOUT=240
 export EDITOR=vim
