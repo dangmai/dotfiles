@@ -21,16 +21,12 @@ if ! fn_exists goto; then
   }
 
   git_clone() {
-    echo "git clone called"
     for repo in $@; do
       if [[ "$repo" == */* ]]; then
-        echo "wildcard $repo"
         local dir=$PROJECT_DIR/src/github.com/$repo
-        echo $dir
         git clone ssh://git@github.com/$repo.git $dir
         cd $dir
       else
-        echo "with name $repo"
         local dir=$PROJECT_DIR/src/github.com/${USER_DEFAULT:-${GH_ORG_DEFAULT}}/$repo
         git clone ssh://git@github.com/${USER_DEFAULT:-${GH_ORG_DEFAULT}}/$repo.git $dir
         cd $dir
