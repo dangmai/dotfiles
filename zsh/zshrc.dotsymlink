@@ -41,6 +41,7 @@ export DOT=`cd "${DIR}"/.. && pwd`
 
 # your project folder that we can `c [tab]` to
 export PROJECTS=~/dev
+export GH_ORG_DEFAULT=dangmai
 
 # source every .zsh file in this rep
 for config_file ($DOT/**/*.zsh) source $config_file
@@ -62,7 +63,6 @@ for config_file ($DOT/**/completion.zsh) source $config_file
 # Make sure Docker client doesn't time out too soon
 export COMPOSE_HTTP_TIMEOUT=240
 export EDITOR=vim
-export GH_ORG_DEFAULT=dangmai
 
 # Auto start tmux or reattach tmux session
 if [ $TERM != "screen-256color" ] && [  $TERM != "screen" ]; then
