@@ -4,3 +4,4 @@ alias nr='npm run'
 alias k=kubectl
 alias kb="kubectl exec -it \$(kubectl get pods | grep beets | cut -d' ' -f1 | head -n1) -- beet"
 alias kh="kubectl --context=home"
+alias ks="kubectl --context=seedbox"
