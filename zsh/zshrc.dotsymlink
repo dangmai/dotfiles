@@ -67,6 +67,8 @@ for config_file ($DOT/**/completion.zsh) source $config_file
 # Make sure Docker client doesn't time out too soon
 export COMPOSE_HTTP_TIMEOUT=240
 export EDITOR=vim
+# Make sure asdf nodejs can use shorted version number (as used in nvmrc)
+export ASDF_NODEJS_LEGACY_FILE_DYNAMIC_STRATEGY=latest_installed
 
 # Auto start tmux or reattach tmux session
 if [ $TERM != "screen-256color" ] && [  $TERM != "screen" ]; then
