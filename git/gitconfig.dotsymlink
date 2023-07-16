@@ -9,5 +9,5 @@
 [core]
         excludesfile = ~/.gitignore
         editor = vim
-[push]
-	default = upstream
+[include]
+        path = ~/.gitconfig.local
