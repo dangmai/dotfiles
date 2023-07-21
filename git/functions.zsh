@@ -21,3 +21,10 @@ gpy () {
     npm ci
   fi
 }
+
+grhh () {
+  # git reset utility, by default resetting hard to HEAD.
+  # Pass in a number to reset to different relative commit.
+  INDEX="${1:-0}"
+  git reset --hard HEAD~${INDEX}
+}
