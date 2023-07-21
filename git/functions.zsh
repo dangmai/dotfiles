@@ -3,3 +3,21 @@ gfm () {
   local defaultBranch=$(git branch -rl '*/HEAD' | rev | cut -d/ -f1 | rev)
   git fetch origin $defaultBranch:$defaultBranch
 }
+
+gpy () {
+  # pull latest changes, then installing dependencies using correct tools based
+  # on some basic file heuristics
+  git pull
+  if [ -f .tool-versions  ] || [ -f .nvmrc ]; then
+    # Check that asdf is installed
+    if [[ $(asdf --version) ]]; then
+      asdf install
+    fi
+  fi
+  if [ -f yarn.lock ] && [[ $(yarn --version) ]]; then
+    yarn install
+  fi
+  if [ -f package-lock.json ] && [[ $(npm --version) ]]; then
+    npm ci
+  fi
+}
