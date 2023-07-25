@@ -17,6 +17,9 @@ gpy () {
   if [ -f yarn.lock ] && [[ $(yarn --version) ]]; then
     yarn install
   fi
+  if [ -f pnpm-lock.yaml ] && [[ $(pnpm --version) ]]; then
+    pnpm install
+  fi
   if [ -f package-lock.json ] && [[ $(npm --version) ]]; then
     npm ci
   fi
