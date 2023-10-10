@@ -4,10 +4,16 @@ gfm () {
   git fetch origin $defaultBranch:$defaultBranch
 }
 
+# gp comes by default with the git OMZ plugin
+unalias gp
+gp () {
+  git pull origin $(git rev-parse --abbrev-ref HEAD)
+}
+
 gpy () {
   # pull latest changes, then installing dependencies using correct tools based
   # on some basic file heuristics
-  git pull
+  gp
   if [ -f .tool-versions  ] || [ -f .nvmrc ]; then
     # Check that asdf is installed
     if [[ $(asdf --version) ]]; then
