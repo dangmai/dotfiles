@@ -4,8 +4,10 @@ gfm () {
   git fetch origin $defaultBranch:$defaultBranch
 }
 
-# gp comes by default with the git OMZ plugin
-unalias gp
+# gp comes by default with the git OMZ plugin and Segment git setup
+if alias gp >/dev/null 2>&1; then
+  unalias gp
+fi
 gp () {
   git pull origin $(git rev-parse --abbrev-ref HEAD)
 }
