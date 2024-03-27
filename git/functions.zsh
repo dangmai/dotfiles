@@ -34,6 +34,9 @@ gpy () {
   if [ -f versions.tf ] && [[ $(terraform -version) ]]; then
     terraform init -upgrade
   fi
+  if [ -f post-install.local ]; then
+    ./post-install.local
+  fi
 }
 
 grhh () {
