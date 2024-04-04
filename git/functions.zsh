@@ -45,3 +45,15 @@ grhh () {
   INDEX="${1:-0}"
   git reset --hard HEAD~${INDEX}
 }
+
+_fzf_complete_gco() {
+  local branches
+  branches=$(git branch -vv --all)
+  _fzf_complete --reverse --multi -- "$@" < <(
+    echo $branches
+  )
+}
+
+_fzf_complete_gco_post() {
+  awk '{print $1}'
+}
