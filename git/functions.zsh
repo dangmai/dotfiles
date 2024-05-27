@@ -16,6 +16,8 @@ gpy () {
   # pull latest changes, then installing dependencies using correct tools based
   # on some basic file heuristics
   gp
+  current_dir=$PWD
+  cd $(git rev-parse --show-toplevel)
   if [ -f .tool-versions  ] || [ -f .nvmrc ]; then
     # Check that asdf is installed
     if [[ $(asdf --version) ]]; then
@@ -37,6 +39,7 @@ gpy () {
   if [ -f post-install.local ]; then
     ./post-install.local
   fi
+  cd $current_dir
 }
 
 grhh () {
