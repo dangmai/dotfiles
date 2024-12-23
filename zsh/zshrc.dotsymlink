@@ -73,7 +73,7 @@ export ASDF_NODEJS_AUTO_ENABLE_COREPACK=true
 export COREPACK_ENABLE_DOWNLOAD_PROMPT=0
 
 # Auto start tmux or reattach tmux session
-if [ $TERM != "screen-256color" ] && [  $TERM != "screen" ]; then
+if [ $TERM != "screen-256color" ] && [ $TERM != "screen" ] && [ $TERM != "tmux" ] && [ $TERM != "tmux-256color" ]; then
   local session=$(tmux list-sessions -F '#{session_name}' | grep -v '^vscode-' | head -n 1)
   if [ ! -z "$session" ];
   then
