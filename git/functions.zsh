@@ -18,10 +18,10 @@ gpy () {
   gp
   current_dir=$PWD
   cd $(git rev-parse --show-toplevel)
-  if [ -f .tool-versions  ] || [ -f .nvmrc ]; then
-    # Check that asdf is installed
-    if [[ $(asdf --version) ]]; then
-      asdf install
+  if [ -f .tool-versions  ] || [ -f .nvmrc ] || [ -f mise.toml ]; then
+    # Check that mise is installed
+    if [[ $(mise --version) ]]; then
+      mise install
     fi
   fi
   if [ -f yarn.lock ] && [[ $(yarn --version) ]]; then

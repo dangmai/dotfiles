@@ -26,7 +26,7 @@ zstyle ':omz:update' mode auto
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(sfdx systemd sudo tmux python node npm man kubectl httpie helm docker docker-compose cp aws asdf yarn fzf direnv)
+plugins=(sfdx systemd sudo tmux python node npm man kubectl httpie helm docker docker-compose cp aws yarn fzf mise)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -67,10 +67,8 @@ for config_file ($DOT/**/completion.zsh) source $config_file
 # Make sure Docker client doesn't time out too soon
 export COMPOSE_HTTP_TIMEOUT=240
 export EDITOR=vim
-# Make sure asdf nodejs can use shorted version number (as used in nvmrc)
-export ASDF_NODEJS_LEGACY_FILE_DYNAMIC_STRATEGY=latest_installed
-export ASDF_NODEJS_AUTO_ENABLE_COREPACK=true
 export COREPACK_ENABLE_DOWNLOAD_PROMPT=0
+export MISE_NODE_COREPACK=true
 
 # Auto start tmux or reattach tmux session
 if [ $TERM != "screen-256color" ] && [ $TERM != "screen" ] && [ $TERM != "tmux" ] && [ $TERM != "tmux-256color" ]; then
