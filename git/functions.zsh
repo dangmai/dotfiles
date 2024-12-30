@@ -33,9 +33,6 @@ gpy () {
   if [ -f package-lock.json ] && [[ $(npm --version) ]]; then
     npm ci
   fi
-  if [ -f versions.tf ] && [[ $(terraform -version) ]]; then
-    terraform init -upgrade
-  fi
   if [ -f post-install.local ]; then
     ./post-install.local
   fi
