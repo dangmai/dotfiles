@@ -7,3 +7,4 @@ python_env
 .env
 .envrc
 mise.local.toml
+mise.*.local.toml
