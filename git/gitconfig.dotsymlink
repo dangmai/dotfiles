@@ -11,3 +11,5 @@
         editor = vim
 [include]
         path = ~/.gitconfig.local
+[init]
+	defaultBranch = main
